@@ -2,10 +2,7 @@ $(document).ready(function(){
 	$(window).load(function(){
 		$(".responseholder").load("courses/toc.php");
 	});
-	$('.response').click(function(){
-		var a=$(this).data('value');
-		$(".responseholder").load(a);
-	});
+	
 });
 function courses()
 {
@@ -30,5 +27,9 @@ function _viewopen(d)
 }
 function logout()
 {
-	alert("logout");
+	xml=createAjaxObj();
+	xml.open("POST","./log/logout.php",false);
+	xml.setRequestHeader("Content-type","application/x-www-form-urlencoded");
+	xml.send();
+	window.open("log/login.php","_self");	
 }

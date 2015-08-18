@@ -35,7 +35,10 @@
                         <?php 
                         session_start();
                         $_SESSION['course_id']=@$_REQUEST['course'];
-                           echo $_SESSION['course'].@$_SESSION['user'] ;//or die("NO user");
+                           if(isset($_SESSION['user']))
+                           echo $_SESSION['user'] ;//or die("NO user");
+                            else
+                                header("location:log/login.php");
                         ?>
                     </a>
                 </li>
