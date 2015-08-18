@@ -128,9 +128,9 @@
     	  <div class="modal-dialog">
 				<div class="loginmodal-container">
 			 <h1>Login to Your Account</h1><br>
-				  <form name="loginform" >
-					<input type="text" name="user" placeholder="Username" required>
-					<input type="password" name="pass" placeholder="Password" pattern="[A-Za-z$_/-0-9]+" required>
+				  <form name="loginform" onsubmit="return _login()">
+					<input type="text" name="user" id="user" placeholder="Username" required>
+					<input type="password" id="pass" name="pass" placeholder="Password"  required>
 					<input type="submit" id="login" name="login" class="login loginmodal-submit" value="Login">
 				  </form>
 					

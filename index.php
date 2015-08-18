@@ -29,7 +29,18 @@
             <ul class="sidebar-nav">
                 <li class="sidebar-brand">
                     <a href="#">
-                        Start Bootstrap
+                        <?php 
+                        session_start();
+                        if(isset($_SESSION['user']))
+                                {
+                                    echo $_SESSION['user'];
+                                }
+                                else
+
+                                {
+                                    header("location:log/login.php");
+                                }
+                        ?>
                     </a>
                 </li>
                 <li>
